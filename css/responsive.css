@@ -93,7 +93,8 @@ div.cart-collaterals ul.products li.product {
 .navbar-toggle .icon-bar { background: none repeat scroll 0 0 #333 }  
 .navbar-collapse.collapse.in {
   background: none repeat scroll 0 0 #f4f4f4;
-  position: relative;
+  /* position: relative; */
+  position: static;
   z-index: 99;
 } 
 .mainmenu-area ul.navbar-nav li a {
