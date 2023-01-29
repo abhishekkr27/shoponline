@@ -68,15 +68,13 @@ jQuery(document).ready(function ($) {
     //     $(".navbar-collapse").removeClass('in');
     // });
 
-
-    $(".navbar-nav li a").click(function (event) {
-        var Click = $(event.target);
-        var Opend = $(".navbar-collapse").hasClass("show");
-        if (Opend === true && !Click.hasClass("navbar-toggler")) {
-            $(".navbar-collapse").collapse("hide");
-        }
+    // when menu item clicked
+    $('.collapse').click(function () {
+        // close navbar if open
+        $(".navbar-toggle:not(.collapsed)").click();
+        $(this).removeClass("in").addClass("collapse");
+        $(".navbar-default .in").removeClass("in").addClass("collapse");
     });
-
 
     // jQuery Scroll effect
     $('.navbar-nav li a, .scroll-to-up').bind('click', function (event) {
