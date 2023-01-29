@@ -68,6 +68,16 @@ jQuery(document).ready(function ($) {
     //     $(".navbar-collapse").removeClass('in');
     // });
 
+
+    $(".navbar-nav li a").click(function (event) {
+        var Click = $(event.target);
+        var Opend = $(".navbar-collapse").hasClass("show");
+        if (Opend === true && !Click.hasClass("navbar-toggler")) {
+            $(".navbar-collapse").collapse("hide");
+        }
+    });
+
+
     // jQuery Scroll effect
     $('.navbar-nav li a, .scroll-to-up').bind('click', function (event) {
         var $anchor = $(this);
@@ -80,12 +90,12 @@ jQuery(document).ready(function ($) {
     });
 
     // Bootstrap ScrollPSY
-        $('body').scrollspy({ 
-            target: '.navbar-collapse',
-            offset: 95
-        })      
-    });
-   
+    $('body').scrollspy({
+        target: '.navbar-collapse',
+        offset: 95
+    })
+});
+
 
 (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
